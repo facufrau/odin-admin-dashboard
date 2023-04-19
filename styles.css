@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --background-color: #e2e8f0;
+    --accent-color: #1992d4;
+    --secondary-color: #ffffff;
+}
+
 body {
     font-family:'Roboto', monospace, Arial, Helvetica, sans-serif;
     display: grid;
@@ -10,17 +16,60 @@ body {
     margin: 0;
 }
 
-nav {
-    grid-area: nav;
-    background-color: #1992d4;
-}
 
 header {
     grid-area: head;
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
 }
 
 main {
     grid-area: main;
-    background-color: #e2e8f0;
+    background-color: var(--background-color);
 }
+
+/* Navbar section styling */
+nav {
+    grid-area: nav;
+    background-color: var(--accent-color);
+    display: grid;
+    grid-template-rows: 80px 200px 100px 100px;
+    align-items: center;
+    justify-items: center;
+}
+
+#nav-title {
+    grid-row: 1 / 2;
+}
+
+#nav-second {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-auto-rows: 30px;
+    gap: 0.5em;
+}
+
+#nav-third {
+    grid-row: 3 / 4;
+}
+
+a.link-nav {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.icon-nav {
+    width: 24px;
+    height: 24px;
+}
+
+img {
+    color: var(--secondary-color);
+}
+
+.filter-white {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(101%);
+}
+
