@@ -32,24 +32,19 @@ nav {
     grid-area: nav;
     background-color: var(--accent-color);
     display: grid;
-    grid-template-rows: 80px 200px 100px 100px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
     align-items: center;
-    justify-items: center;
+    align-content: start;
+    row-gap: 2rem;
 }
 
-#nav-title {
-    grid-row: 1 / 2;
-}
-
-#nav-second {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-auto-rows: 30px;
-    gap: 0.5em;
-}
-
-#nav-third {
-    grid-row: 3 / 4;
+nav > div {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-auto-rows: auto;
+   padding: 1rem 2rem;
+   gap: 1rem;
 }
 
 a.link-nav {
@@ -72,4 +67,3 @@ img {
 .filter-white {
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(101%);
 }
-
